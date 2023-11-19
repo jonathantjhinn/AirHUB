@@ -11,13 +11,13 @@
     <div class="home-background">
         <br>
         <div class="button-home">
-            <span class="login"><a href="./profile.html">Login</a></span>
-            <button class="daftar" onclick="window.location.href = 'profile.html';">Sign Up</button>
+            <span class="login"><a href="/booking">Login</a></span>
+            <button class="daftar" onclick="window.location.href = '/booking';">Sign Up</button>
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <p style="font-family: inter;">AirHUB - Makes You FLY!</p>
         <br><br><br><br>
-        <div class="details"><a href="./profile.html"><img src="resources-img/more-details-home.png" alt=""></a></div>
+        <div class="details"><a href="./booking"><img src="resources-img/more-details-home.png" alt=""></a></div>
         <br><br><br><br><br><br><br>
     </div>
     <div class="second-home-background"></div>

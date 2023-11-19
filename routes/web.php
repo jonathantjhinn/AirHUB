@@ -24,37 +24,25 @@ Route::get('/', function () {
 // });
 
 
-// Route::group(['middleware' => 'alreadyLogin'], function() {
-//     Route::get('/register', [UserController::class, 'viewregister'] );
-//     Route::post('/register', [UserController::class, 'createuser'] );
-    
-//     Route::get('/login', [UserController::class, 'viewlogin'] );
-//     Route::post('/login', [UserController::class, 'checklogin'] );
-    
-// });
+Route::group(['middleware' => 'alreadyLogin'], function() {
+    Route::get('/login', [UserController::class, 'viewlogin'] );
+    Route::get('/register', [UserController::class, 'viewregister'] );
+});
 
-Route::get('/register', [UserController::class, 'viewregister'] );
+Route::group(['middleware'=> 'isLogin'], function() {
+    Route::get('/profile/{id}', [UserController::class, 'viewprofile'] );
+    Route::get('/getbackprofile', [UserController::class, 'getbackprofile'] );
+    Route::get('/booking', [BookingController::class,'viewbooking'] );
+    Route::get('/dashboard/{email}', [BookingController::class,'viewdashboard'] );
+    Route::get('/booking-detail/{listid}', [BookingController::class,'findbookingdetail']);
+});
+
+
 Route::post('/register', [UserController::class, 'createuser'] );
-
-Route::get('/login', [UserController::class, 'viewlogin'] );
 Route::post('/login', [UserController::class, 'checklogin'] );
-
-
 Route::get('/logout', [UserController::class,'logout'] );
-
-Route::get('/profile/{id}', [UserController::class, 'viewprofile'] );
-Route::get('/getbackprofile', [UserController::class, 'getbackprofile'] );
 Route::put('/profile/{id}', [UserController::class, 'editprofile'] );
-
 Route::get('/home', [UserController::class,'viewhome'] );
-
-Route::get('/booking', [BookingController::class,'viewbooking'] );
-
-Route::get('/dashboard/{email}', [BookingController::class,'viewdashboard'] );
-
-// Route::get('/booking', [BookingController::class,'findbookingdetail']);
-
-Route::get('/booking-detail/{listid}', [BookingController::class,'findbookingdetail']);
 Route::post('/booking-detail/{listid}', [BookingController::class,'addtransaction']);
 
 

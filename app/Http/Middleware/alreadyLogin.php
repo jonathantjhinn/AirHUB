@@ -18,7 +18,7 @@ class alreadyLogin
     public function handle(Request $request, Closure $next)
     {
         if(Auth::check()) {
-            return redirect('/profile');
+            return redirect('/booking');
         }
         return $next($request);
     }

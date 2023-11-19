@@ -10,6 +10,6 @@ class airlist extends Model
     protected $table = 'airlist';
 
     protected $fillable = [
-        'planecode', 'depart', 'arrival', 'datedepart', 'datearrival', 'gate', 'price'
+        'planecode', 'depart', 'arrival', 'datedepart', 'datearrival', 'gate', 'price', 'class'
     ];
 }

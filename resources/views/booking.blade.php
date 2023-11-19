@@ -19,20 +19,30 @@
     </div>
     <div class="inside">
         <h1>List of Ticket or Booking(s)</h1>
-        <br><br><br>
-        @foreach ($data as $item)
-            <div class="row">
-                <div class="column">
-                    <div class="card">
-                        <h3>{{$item->depart}} - {{$item->arrival}}</h3>
-                        <p><span class="material-symbols-outlined">flight_takeoff</span> Depature Time : {{$item->datedepart}}</p>
-                        <p><span class="material-symbols-outlined">flight_land</span> Arrival Time : {{$item->datearrival}}</p>
-                        <p><span class="material-symbols-outlined">airplane_ticket</span> Gate : {{$item->gate}}</p>
-                        <p><a href="/booking-detail/{{$item->listid}}">Buy >></a></p>
+        <form method="post" action="/filterview">
+            @csrf
+            <label for="type">Select Type:</label>
+            <select name="type" id="type">
+                <option value="business">Business</option>
+                <option value="economy">Economy</option>
+            </select>
+            <button type="submit">Search</button>
+            
+            <br><br><br>
+            @foreach ($data as $item)
+                <div class="row">
+                    <div class="column">
+                        <div class="card">
+                            <h3>{{$item->depart}} - {{$item->arrival}} {{$item->class}}</h3>
+                            <p><span class="material-symbols-outlined">flight_takeoff</span> Depature Time : {{$item->datedepart}}</p>
+                            <p><span class="material-symbols-outlined">flight_land</span> Arrival Time : {{$item->datearrival}}</p>
+                            <p><span class="material-symbols-outlined">airplane_ticket</span> Gate : {{$item->gate}}</p>
+                            <p><a href="/booking-detail/{{$item->listid}}">Buy >></a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        </form>
     </div>
     
 </body>

@@ -33,6 +33,7 @@ Route::group(['middleware'=> 'isLogin'], function() {
     Route::get('/profile/{id}', [UserController::class, 'viewprofile'] );
     Route::get('/getbackprofile', [UserController::class, 'getbackprofile'] );
     Route::get('/booking', [BookingController::class,'viewbooking'] );
+    Route::post('/filterview', [BookingController::class,'filterview'] );
     Route::get('/dashboard/{email}', [BookingController::class,'viewdashboard'] );
     Route::get('/booking-detail/{listid}', [BookingController::class,'findbookingdetail']);
 });

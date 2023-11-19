@@ -70,4 +70,9 @@ class BookingController extends Controller
         return view("dashboard")->with('data', $data);
     }
 
+    function filterview(Request $request) {
+        $data = airlist::where('class', $request->input('type'))->orderBy('datedepart', 'asc')->get();
+        return view("booking")->with('data', $data);
+    }
+
 }

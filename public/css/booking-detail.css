@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #50BFDB;
+    font-size: 20px;
+}
+
+li {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.left img {
+    height: 50px;
+    width: 90px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 18px 22px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    color: #268EA8;
+}
+
+.active {
+    background-color: #268EA8;
+    color: #50BFDB;
+    pointer-events: none;
+}
+
+.inside {
+    font-family: 'Inter';
+    margin: 100px;
+    border: 0px solid black;
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.inside input[type=text] {
+    border-radius: 15px;
+    background-color: #F4F4F4;
+    border: 0px;
+    font-size: 17px;
+    padding: 10px;
+    font-weight: lighter;
+    width: 90%;
+}
+
+.inside h1 {
+    color: #DE7A7A;
+}
+
+.insideleft {
+    text-align: end;
+}
+
+form input[type=submit] {
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 15px;
+    border: 0px;
+    border-radius: 20px;
+    color: white;
+    background-color: #50BFDB;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+
+

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #50BFDB;
+    font-size: 20px;
+}
+
+li {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.left img {
+    height: 50px;
+    width: 90px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 18px 22px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    color: #268EA8;
+}
+
+.active {
+    background-color: #268EA8;
+    color: #50BFDB;
+    pointer-events: none;
+}
+
+.container {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
+.photo {
+    align-self: center;
+    margin-right: 50px;
+    /* text-align: center; */
+    margin-left: 50px;
+}
+
+.photo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.photo form {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 50px;
+    border-radius: 20px;
+    font-family: 'Inter'
+}
+
+.photo label {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.photo input {
+    border: 0px solid;
+    margin-left: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.photo button {
+    padding: 5px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    float: right;
+}

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.home-background {
+    background-image: url('../resources-img/background-home.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.home-background p {
+    margin-left: 10vw;
+    font-size: 50px;
+    font-family: 'Inter';
+    color: white;
+    text-shadow: 2px 2px 2px #818181;
+}
+
+.button-home {
+    font-family: 'Inter';
+    text-align: right;
+    font-size: 20px;
+}
+
+.login a {
+    color: white;
+    text-decoration: none;
+}
+
+.daftar {
+    font-size: 20px;
+    margin-right: 5vw;
+    margin-left: 2vw;
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.details img {
+    position: absolute;
+    width: 90vw;
+    height: 40vh;
+    margin-left: 8vh;
+}
+
+.second-home-background {
+    background-color: #F5F5F5;
+    height: 50vh;
+}

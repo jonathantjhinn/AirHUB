@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #50BFDB;
+    font-size: 20px;
+}
+
+li {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.left img {
+    height: 50px;
+    width: 90px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 18px 22px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    color: #268EA8;
+}
+
+.active {
+    background-color: #268EA8;
+    color: #50BFDB;
+    pointer-events: none;
+}
+
+
+
+.inside {
+    font-family: 'Inter';
+    margin: 100px;
+    border: 0px solid black;
+    height: 100vh;
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.inside h1 {
+    font-weight: lighter;
+}
+
+
+
+.column {
+    float: left;
+    width: 31%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    background-color: #E4F4F5;
+    border-radius: 30px;
+}
+
+.card span {
+    color: #50BFDB;
+}
+
+
